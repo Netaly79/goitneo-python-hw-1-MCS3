@@ -13,8 +13,8 @@ def add_contact(args, contacts):
             answer = input("This contact already exists. Do you want to rewrite this contact? Press 1 if yes, 0 if no\n")
             if answer == '0':
                 return "Contact hasn't been modified"
-        contacts[name] = phone
-        return "Contact added."
+            contacts[name] = phone
+            return "Contact added."
     
 def change_contact(args, contacts):
     try:
@@ -26,7 +26,7 @@ def change_contact(args, contacts):
             contacts[name] = phone
             return "Contact updated."
         else:
-            answer = input("This contact doesn't exists. Do you want to add this contact? Press 1 if yes, 0 if no\n")
+            answer = input("This contact doesn't exist. Do you want to add this contact? Press 1 if yes, 0 if no\n")
             if answer == '0':
                 return "Contact hasn't been added"
             contacts[name] = phone
@@ -54,7 +54,7 @@ def main():
         command, *args = parse_input(user_input)
 
         if command in ["close", "exit"]:
-            print("Good bye!")
+            print("Goodbye!")
             break
         elif command == "hello":
             print("How can I help you?")
